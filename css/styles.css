@@ -9,20 +9,22 @@ html, body {
 	padding: 0;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-	transition: opacity 1s;
-	-webkit-transition: opacity 1s;
-	-moz-transition: opacity 1s;
-	-o-transition: opacity 1s;
+div {
+	transition: opacity .25s;
+	-webkit-transition: opacity .25s;
+	-moz-transition: opacity .25s;
+	-o-transition: opacity .25s;
 }
 
-.no-transition > img {
+.no-transition {
 	transition: none;
 	-webkit-transition: none;
 	-moz-transition: none;
 	-o-transition: none;
+}
+
+#loading {
+	display: none;
 }
 
 .next {
@@ -46,7 +48,8 @@ img {
 	right: 0;
 	left: 0;
 	bottom: 0;
-	background-size: contain;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .position-5 {

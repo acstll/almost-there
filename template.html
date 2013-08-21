@@ -15,10 +15,10 @@
 
 		<% _.each(data.images, function (image) { %>
 			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %>" 
-				data-src="<%= data.filepath %><%= image.src %>" 
-				data-alt="<%= image.alt %>"></div>
+				data-src="<%= data.filepath %><%= image.src %>"></div>
 		<% }); %>
 
+		<div id="loading"></div>
 		<script src="/js/scripts.js"></script>
 	</body>
 </html>

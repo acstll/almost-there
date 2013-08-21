@@ -14,6 +14,7 @@ var SPACEBAR = 32;
 var RIGHT_ARR = 39;
 
 var images;
+var loading = document.getElementById('loading');
 
 
 
@@ -30,23 +31,23 @@ function handleKey (e) {
 function render (el) {
   var img = new Image;
   var src = el.getAttribute('data-src');
-  var alt = el.getAttribute('data-alt');
 
   if (!src) return;
 
   // SVG fallback
   if (/\.svg/.test(src) && !Modernizr.svg) src = src.replace('.svg', '.png');
 
-  img.src = src;
-  img.alt = alt;
-  img.className = 'loading';
-  if (Modernizr.opacity) img.style.opacity = 0;
-  img.addEventListener('load', function () {
-    this.className = '';
-    if (Modernizr.opacity) this.style.opacity = 1;
-  });
+  if (Modernizr.opacity) el.style.opacity = 0;
+  el.style.display = 'none';
 
-  el.appendChild(img);
+  addListener('load', function () {
+    el.style.display = '';
+    if (Modernizr.opacity) el.style.opacity = 1;
+  }, img);
+  img.src = src;
+  loading.appendChild(img);
+
+  el.style.backgroundImage = 'url(' + src + ')';
 }
 
 // IE8 bullshit
@@ -58,6 +59,8 @@ function addListener (type, handler, el) {
   } else {
     el.attachEvent('on' + type, handler);
   }
+
+  return el;
 }
 
 

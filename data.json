@@ -1,0 +1,26 @@
+{
+	"filepath": "/images/",
+  "images": [
+    {
+      "file": "file1.jpg",
+      "slug": "yay",
+      "title": "File One",
+      "background": "white",
+      "position": 1,
+      "size": 4
+    },
+    {
+      "file": "file2.jpg",
+      "slug": "holy",
+      "title": "File Two",
+      "background": "black",
+      "position": 0,
+      "size": 0
+    },
+    {
+      "file": null,
+      "slug": "almost-there",
+      "title": "Almost There"
+    }
+  ]
+}

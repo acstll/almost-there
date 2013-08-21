@@ -1,9 +1,13 @@
 {
   "link": "http://aleixplademunt.com",
 	"filepath": "/images/",
-  "images": [
+  "pages": [
     {
-      "file": "file1.jpg",
+      "files": [
+        {
+          "src": "01_my_cells_1.jpg"
+        }
+      ],
       "slug": "please-please-please",
       "title": "File One",
       "background": "white",
@@ -11,7 +15,11 @@
       "size": 4
     },
     {
-      "file": "file2.jpg",
+      "files": [
+        {
+          "src": "04_jupiter.jpg"
+        }
+      ],
       "slug": "holy",
       "title": "File Two",
       "background": "black",

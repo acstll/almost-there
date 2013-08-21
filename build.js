@@ -25,7 +25,7 @@ module.exports = build;
 
 function build (options, callback) {
   var filepath;
-  var images = data.images;
+  var pages = data.pages;
 
   // remove folders from latest build
   if (!clean && typeof latest === 'string') {
@@ -46,31 +46,34 @@ function build (options, callback) {
 
   console.log('building...');
 
-  slugs.push(images[0].slug);
+  slugs.push(pages[0].slug);
 
   // reference to "root" dir for removing it on next build
-  fs.writeFileSync(latestPath, images[0].slug);
+  fs.writeFileSync(latestPath, pages[0].slug);
 
   // index.html
   fs.writeFileSync(__dirname + '/index.html', template({
+    filepath: filepath,
     next: join('/', slugs[0]),
     title: 'Aleix Plademunt'
   }));
 
-  // image pages + coda
-  _.each(images, function (image, i) {
-    var next = (i == images.length - 1) ? null : images[i + 1].slug;
+  // images + coda
+  _.each(pages, function (page, i) {
+    var next = (i == pages.length - 1) ? null : pages[i + 1].slug;
     var dir = join(__dirname, slugs.join('/'));
 
     if (next) slugs.push(next);
 
-    console.log('creating ' + image.title);
+    console.log('creating ' + page.title);
 
     mkdirp.sync(dir);
     
     fs.writeFileSync(dir + '/index.html', template({
+      filepath: filepath,
       next: next ? '/' + slugs.join('/') : data.link,
-      title: image.title
+      title: page.title,
+      files: page.files
     }));
   });
 

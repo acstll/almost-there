@@ -9,13 +9,23 @@ html, body {
 	padding: 0;
 }
 
+img {
+	display: block;
+	transition: opacity .25s;
+	-webkit-transition: opacity .25s;
+	-moz-transition: opacity .25s;
+	-o-transition: opacity .25s;
+}
+
 .next {
 	position: absolute;
 	top: 0;
+	right: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	bottom: 0;
 	background: transparent;
+	/*background: rgba(100, 0, 240, 0.2);*/
+	cursor: default;
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;

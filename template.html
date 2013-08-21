@@ -5,14 +5,18 @@
 		<title><%= data.title %></title>
 
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Aleix Plademunt, photography, Almost There, Ca l'Isidret Edicions, Mack Books">
 
 		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body>
 		<a href="<%= data.next %>" class="next">Next</a>
 
-		<% _.each(data.files, function (file) { %>
-			<div data-src="<%= data.filepath %><%= file.src %>" data-alt="<%= data.title %>"></div>
+		<% _.each(data.images, function (image) { %>
+			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %>" 
+				data-src="<%= data.filepath %><%= image.src %>" 
+				data-alt="<%= image.alt %>"></div>
 		<% }); %>
 
 		<script src="/js/scripts.js"></script>

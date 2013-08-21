@@ -3,33 +3,39 @@
 	"filepath": "/images/",
   "pages": [
     {
-      "files": [
-        {
-          "src": "01_my_cells_1.jpg"
-        }
-      ],
-      "slug": "please-please-please",
-      "title": "File One",
+      "slug": "my-cells",
+      "title": "My Cells",
       "background": "white",
-      "position": 1,
-      "size": 4
-    },
-    {
-      "files": [
+      "images": [
         {
-          "src": "04_jupiter.jpg"
+          "src": "01_my_cells_1.jpg",
+          "alt": "My Cells",
+          "class": null,
+          "position": 0,
+          "size": 0
         }
-      ],
-      "slug": "holy",
-      "title": "File Two",
-      "background": "black",
-      "position": 0,
-      "size": 0
+      ]
     },
     {
-      "file": null,
-      "slug": "almost-there",
-      "title": "Almost There"
+      "slug": "missent",
+      "title": "‘On my way to the south’. Missent, 1909",
+      "background": "black",
+      "images": [
+        {
+          "src": "01_my_cells_1.jpg",
+          "alt": "My Cells",
+          "class": "no-transition",
+          "position": 0,
+          "size": 0
+        },
+        {
+          "src": "02_missent.png",
+          "alt": "‘On my way to the south’. Missent, 1909",
+          "class": null,
+          "position": 5,
+          "size": 3
+        }
+      ]
     }
   ]
 }

@@ -73,7 +73,7 @@ function build (options, callback) {
       filepath: filepath,
       next: next ? '/' + slugs.join('/') : data.link,
       title: page.title,
-      files: page.files
+      images: page.images
     }));
   });
 

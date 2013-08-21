@@ -10,15 +10,24 @@ html, body {
 }
 
 img {
+	max-width: 100%;
 	display: block;
-	transition: opacity .25s;
-	-webkit-transition: opacity .25s;
-	-moz-transition: opacity .25s;
-	-o-transition: opacity .25s;
+	transition: opacity 1s;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+}
+
+.no-transition > img {
+	transition: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
 }
 
 .next {
 	position: absolute;
+	z-index: 10;
 	top: 0;
 	right: 0;
 	left: 0;
@@ -29,4 +38,24 @@ img {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
+}
+
+.position-0 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-size: contain;
+}
+
+.position-5 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	height: 50%;
+	margin: auto;
 }

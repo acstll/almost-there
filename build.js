@@ -4,8 +4,10 @@ var exec = require('child_process').exec;
 var _ = require('lodash');
 var mkdirp = require('mkdirp');
 
-var template = require('./templates');
 var data = require('./data.json');
+
+_.templateSettings.variable = 'data';
+var template = _.template(fs.readFileSync(__dirname + '/template.html', 'utf-8'));
 
 var slugs = [];
 
@@ -50,25 +52,24 @@ function build (options, callback) {
   fs.writeFileSync(latestPath, images[0].slug);
 
   // index.html
-  fs.writeFileSync(__dirname + '/index.html', template.text({
+  fs.writeFileSync(__dirname + '/index.html', template({
     next: join('/', slugs[0]),
-    title: 'Aleix Plademunt',
-    text: 'Aleix Plademunt'
+    title: 'Aleix Plademunt'
   }));
 
   // image pages + coda
   _.each(images, function (image, i) {
     var next = (i == images.length - 1) ? null : images[i + 1].slug;
-
-    var type = next ? 'images' : 'text';
     var dir = join(__dirname, slugs.join('/'));
 
     if (next) slugs.push(next);
 
+    console.log('creating ' + image.title);
+
     mkdirp.sync(dir);
     
-    fs.writeFileSync(dir + '/index.html', template[type]({
-      next: '/' + slugs.join('/'),
+    fs.writeFileSync(dir + '/index.html', template({
+      next: next ? '/' + slugs.join('/') : data.link,
       title: image.title
     }));
   });
@@ -76,6 +77,8 @@ function build (options, callback) {
   // start server if any
   callback();
 }
+
+
 
 if (require.main === module) {
   build({ filepath: process.argv[2] }, function () {

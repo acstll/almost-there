@@ -1,9 +1,10 @@
 {
+  "link": "http://aleixplademunt.com",
 	"filepath": "/images/",
   "images": [
     {
       "file": "file1.jpg",
-      "slug": "yay",
+      "slug": "please-please-please",
       "title": "File One",
       "background": "white",
       "position": 1,

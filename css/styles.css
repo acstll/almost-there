@@ -1,0 +1,22 @@
+* { 
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.next {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}

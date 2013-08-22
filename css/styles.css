@@ -9,21 +9,19 @@ html, body {
 	padding: 0;
 }
 
-div {
-	transition: opacity .25s;
-	-webkit-transition: opacity .25s;
-	-moz-transition: opacity .25s;
-	-o-transition: opacity .25s;
+body {
+	font-size: 10px;
 }
 
-.no-transition {
-	transition: none;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
+.white {
+	background-color: rgb(255, 255, 255);
 }
 
-#loading {
+.black {
+	background-color: rgb(0, 0, 0);
+}
+
+#loading-box {
 	display: none;
 }
 
@@ -42,23 +40,61 @@ div {
 	overflow: hidden;
 }
 
-.position-0 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background-size: cover;
-	background-repeat: no-repeat;
+div {
+	transition: opacity .25s;
+	-webkit-transition: opacity .25s;
+	-moz-transition: opacity .25s;
+	-o-transition: opacity .25s;
 }
 
-.position-5 {
+.no-transition {
+	transition: none;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+}
+
+.position-0,
+.position-1,
+.position-2,
+.position-3,
+.position-4,
+.position-5,
+.position-6,
+.position-7,
+.position-8,
+.position-9 {
 	position: absolute;
 	top: 0;
 	right: 0;
 	left: 0;
 	bottom: 0;
-	width: 50%;
-	height: 50%;
-	margin: auto;
+	background-repeat: no-repeat;
+	margin: 2em;
 }
+
+.position-0 { background-position: center; margin: 0; }
+.position-1 { background-position: left top; }
+.position-2 { background-position: center top; }
+.position-3 { background-position: right top; }
+.position-4 { background-position: left; }
+.position-5 { background-position: center; }
+.position-6 { background-position: right; }
+.position-7 { background-position: left bottom; }
+.position-8 { background-position: center bottom; }
+.position-9 { background-position: right bottom; }
+
+.size-0 {
+	background-size: cover;
+	-ms-behavior: url(/backgroundsize.min.htc);
+}
+
+.size-1.portrait { background-size: auto 30%; }
+.size-2.portrait { background-size: auto 40%; }
+.size-3.portrait { background-size: auto 55%; }
+.size-4.portrait { background-size: auto 70%; }
+
+.size-1.landscape { background-size: 30%; }
+.size-2.landscape { background-size: 40%; }
+.size-3.landscape { background-size: 55%; }
+.size-4.landscape { background-size: 70%; }

@@ -11,26 +11,444 @@
           "src": "01_my_cells_1.jpg",
           "class": null,
           "position": 0,
-          "size": 0
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
         }
       ]
     },
     {
       "slug": "missent",
       "title": "‘On my way to the south’. Missent, 1909",
-      "background": "black",
+      "background": "white",
       "images": [
         {
           "src": "01_my_cells_1.jpg",
           "class": "no-transition",
           "position": 0,
-          "size": 0
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
         },
         {
           "src": "02_missent.png",
           "class": null,
           "position": 5,
-          "size": 3
+          "size": 3,
+          "z": 2,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "aeroplane",
+      "title": "Aeroplane",
+      "background": "white",
+      "images": [
+        {
+          "src": "03_aeroplane.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "jupiter",
+      "title": "Jupiter. The largest planet in the Solar System and its four moons",
+      "background": "black",
+      "images": [
+        {
+          "src": "04_jupiter.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "el-pallars",
+      "title": "Pallars, Catalunya",
+      "background": "black",
+      "images": [
+        {
+          "src": "05_el_pallars.jpg",
+          "class": "",
+          "position": 6,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "muricecs-cave",
+      "title": "Muricecs Cave, Catalunya, where Neanderthal remains dating back 40,000 years were found",
+      "background": "black",
+      "images": [
+        {
+          "src": "07_muricecs_cave.jpg",
+          "class": "",
+          "position": 4,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "paranthropus-boisei",
+      "title": "Replica of a skull of a Paranthropus boisei dating back 2,300,000 years",
+      "background": "black",
+      "images": [
+        {
+          "src": "06_paranthropus_boisei.jpg",
+          "class": "",
+          "position": 6,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "kitsilano-winter",
+      "title": "Kitsilano, Vancouver, Canada. Winter",
+      "background": "white",
+      "images": [
+        {
+          "src": "08_kitsilano_winter.jpg",
+          "class": "",
+          "position": 5,
+          "size": 2,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "vancouver",
+      "title": "Vancouver, Canada",
+      "background": "white",
+      "images": [
+        {
+          "src": "09_vancouver.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "VY-canis-majoris",
+      "title": "VY Canis Majoris. The largest known star, located around 4,900 light years from Earth",
+      "background": "black",
+      "images": [
+        {
+          "src": "10_VY_canis_majoris.jpg",
+          "class": "",
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "my-father",
+      "title": "My father",
+      "background": "white",
+      "images": [
+        {
+          "src": "11_my_father.jpg",
+          "class": "",
+          "position": 5,
+          "size": 1,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "denticulate-flint",
+      "title": "Denticulate flint from the Mousterian period (100,000 to 40,000 years ago) found in Capellades, Catalunya",
+      "background": "white",
+      "images": [
+        {
+          "src": "12_denticulate_flint.jpg",
+          "class": "",
+          "position": 5,
+          "size": 1,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "black-slate",
+      "title": "Black slate",
+      "background": "white",
+      "images": [
+        {
+          "src": "13_black_slate.jpg",
+          "class": "",
+          "position": 5,
+          "size": 2,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "horse",
+      "title": "Horse",
+      "background": "white",
+      "images": [
+        {
+          "src": "14_horse.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "omphacite-axe",
+      "title": "Omphacite axe found in La Bisbal, Catalunya, dating back about 4,900 years",
+      "background": "black",
+      "images": [
+        {
+          "src": "15_omphacite_axe.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "american-car",
+      "title": "American car",
+      "background": "black",
+      "images": [
+        {
+          "src": "16_american_car.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "tree",
+      "title": "Tree",
+      "background": "black",
+      "images": [
+        {
+          "src": "17_tree.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "punches",
+      "title": "Punches made out of bones found in Fou’s Cave, Catalunya, dating back about 4,900 years",
+      "background": "black",
+      "images": [
+        {
+          "src": "18_punches.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "andromeda",
+      "title": "Andromeda. The spiral galaxy closest to the Milky Way. Located around 2,500,000 light years from us",
+      "background": "black",
+      "images": [
+        {
+          "src": "19_andromeda.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "my-cells-rialb-cave",
+      "title": "My cells / Rialb Cave, Catalunya, where Paleolithic remains dating back 9,000 to 2,500,000 years were found",
+      "background": "white",
+      "images": [
+        {
+          "src": "20_my_cells_2.jpg",
+          "class": "",
+          "position": 6,
+          "size": 2,
+          "z": 1,
+          "orientation": "portrait"
+        },
+        {
+          "src": "21_rialb_cave.jpg",
+          "class": "",
+          "position": 4,
+          "size": 2,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "my-red-cells",
+      "title": "My red cells",
+      "background": "white",
+      "images": [
+        {
+          "src": "22_my_red_cells.jpg",
+          "class": "",
+          "position": 5,
+          "size": 2,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "snake",
+      "title": "Remake of Renger-Patzsch snake",
+      "background": "white",
+      "images": [
+        {
+          "src": "23_snake.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "feed-grain",
+      "title": "Feed grain",
+      "background": "white",
+      "images": [
+        {
+          "src": "24_feed_grain.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "spherical-tank",
+      "title": "Spherical tank",
+      "background": "white",
+      "images": [
+        {
+          "src": "25_spherical_tank.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "moon",
+      "title": "Moon. The closest object in space to Earth",
+      "background": "black",
+      "images": [
+        {
+          "src": "26_moon.jpg",
+          "class": "",
+          "position": 5,
+          "size": 4,
+          "z": 1,
+          "orientation": "portrait"
+        }
+      ]
+    },
+    {
+      "slug": "ice",
+      "title": "Ice. Canada",
+      "background": "white",
+      "images": [
+        {
+          "src": "27_ice.jpg",
+          "class": "",
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "winnipeg",
+      "title": "Winnipeg, Canada",
+      "background": "white",
+      "images": [
+        {
+          "src": "28_winnipeg.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "hostalric",
+      "title": "Hostalric,Catalunya, my home town",
+      "background": "white",
+      "images": [
+        {
+          "src": "29_hostalric.jpg",
+          "class": "",
+          "position": 5,
+          "size": 3,
+          "z": 1,
+          "orientation": "landscape"
+        }
+      ]
+    },
+    {
+      "slug": "almost-there",
+      "title": "Almost There",
+      "background": "white",
+      "images": [
+        {
+          "src": null,
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1
         }
       ]
     }

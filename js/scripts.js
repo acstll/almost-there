@@ -14,7 +14,7 @@ var SPACEBAR = 32;
 var RIGHT_ARR = 39;
 
 var images;
-var loading = document.getElementById('loading');
+var loading = document.getElementById('loading-box');
 
 
 
@@ -40,14 +40,24 @@ function render (el) {
   if (Modernizr.opacity) el.style.opacity = 0;
   el.style.display = 'none';
 
-  addListener('load', function () {
-    el.style.display = '';
-    if (Modernizr.opacity) el.style.opacity = 1;
-  }, img);
+  addListener('load', show, img);
   img.src = src;
   loading.appendChild(img);
 
+  function show () {
+    el.style.display = '';
+    if (Modernizr.opacity) el.style.opacity = 1;
+  }
+
   el.style.backgroundImage = 'url(' + src + ')';
+}
+
+function load (src) {
+  if (!src) return;
+
+  var img = new Image;
+  img.src = filepath + src;
+  loading.appendChild(img);
 }
 
 // IE8 bullshit
@@ -68,6 +78,7 @@ function addListener (type, handler, el) {
 if (!'querySelector' in document) {
   alert('Your browser is too old.');
 
+  // TODO
   // maybe add class to body to "unhide" hidden img tags
   // but make sure display:none images do not load before showing
 }
@@ -75,13 +86,16 @@ if (!'querySelector' in document) {
 // Go to next page on spacebar or enter
 addListener('keydown', handleKey);
 
-// special magic for special cases
+// Special magic for special cases
+// TODO
 
 // Render images
 images = document.querySelectorAll('div');
 for (var i = 0; i < images.length; i++) render(images[i]);
 
 // Really pre-load
-// use array inserted on template and load into a hidden div
+if (typeof preload === 'object' && preload.length) {
+  for (i = 0; i < preload.length; i++) load(preload[i].src);
+}
 
 })();

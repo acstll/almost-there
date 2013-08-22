@@ -10,15 +10,22 @@
 
 		<link rel="stylesheet" href="/css/styles.css">
 	</head>
-	<body>
+	<body class="<%= data.background %> <%= data.slug %>">
 		<a href="<%= data.next %>" class="next">Next</a>
 
 		<% _.each(data.images, function (image) { %>
-			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %>" 
-				data-src="<%= data.filepath %><%= image.src %>"></div>
+			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %> <%= image.orientation %>" 
+				data-src="<%= data.filepath %><%= image.src %>"
+				style="z-index:<%= image.z %>;"></div>
 		<% }); %>
 
-		<div id="loading"></div>
+		<div id="loading-box"></div>
+
+		<script>
+		var preload = JSON.parse('<%= data.preload %>');
+		var filepath = '<%= data.filepath %>';
+		</script>
+		
 		<script src="/js/scripts.js"></script>
 	</body>
 </html>

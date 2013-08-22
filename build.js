@@ -55,7 +55,8 @@ function build (options, callback) {
   fs.writeFileSync(__dirname + '/index.html', template({
     filepath: filepath,
     next: join('/', slugs[0]),
-    title: 'Aleix Plademunt'
+    title: 'Aleix Plademunt',
+    preload: JSON.stringify(pages[0].images)
   }));
 
   // images + coda
@@ -73,7 +74,9 @@ function build (options, callback) {
       filepath: filepath,
       next: next ? '/' + slugs.join('/') : data.link,
       title: page.title,
-      images: page.images
+      background: page.background,
+      images: page.images,
+      preload: next ? JSON.stringify(pages[i + 1].images) : null
     }));
   });
 

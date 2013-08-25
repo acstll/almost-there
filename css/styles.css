@@ -90,9 +90,9 @@ div {
 }
 
 .size-1.portrait { background-size: auto 30%; }
-.size-2.portrait { background-size: auto 40%; }
+.size-2.portrait { background-size: auto 45%; }
 .size-3.portrait { background-size: auto 55%; }
-.size-4.portrait { background-size: auto 70%; }
+.size-4.portrait { background-size: auto 85%; }
 
 .size-1.landscape { background-size: 30%; }
 .size-2.landscape { background-size: 40%; }

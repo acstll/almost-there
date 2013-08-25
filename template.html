@@ -22,7 +22,9 @@
 		<div id="loading-box"></div>
 
 		<script>
+		<% if (!_.isEmpty(data.preload)) { %>
 		var preload = JSON.parse('<%= data.preload %>');
+		<% }; %>
 		var filepath = '<%= data.filepath %>';
 		</script>
 		

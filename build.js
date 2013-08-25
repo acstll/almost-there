@@ -56,6 +56,14 @@ function build (options, callback) {
     filepath: filepath,
     next: join('/', slugs[0]),
     title: 'Aleix Plademunt',
+    images: [{
+      'src': '00_ap.svg',
+      'class': null,
+      'position': 5,
+      'size': 1,
+      'z': 1,
+      'orientation': 'landscape'
+    }],
     preload: JSON.stringify(pages[0].images)
   }));
 

@@ -25,6 +25,21 @@ body {
 	display: none;
 }
 
+#spinner {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 2em;
+	left: 2em;
+	width: .5em;
+	height: .5em;
+	border-radius: .5em;
+	background: yellow;
+	transition: display .1s;
+	-webkit-transition: display .1s;
+	-moz-transition: display .1s;
+}
+
 .next {
 	position: absolute;
 	z-index: 10;

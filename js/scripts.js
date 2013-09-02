@@ -21,6 +21,7 @@ var RIGHT_ARR = 39;
 
 var images;
 var loading = document.getElementById('loading-box');
+var spinner = document.getElementById('spinner');
 var text = document.querySelector('.text');
 
 
@@ -39,6 +40,11 @@ function next () {
   window.location = href;
 }
 
+function spin (start) {
+  var display = start ? 'block' : '';
+  spinner.style.display = display;
+}
+
 function render (el) {
   var img;
   var src = el.getAttribute('data-src');
@@ -46,6 +52,8 @@ function render (el) {
   var delay = el.getAttribute('data-delay') || 500;
 
   if (!src) return;
+
+  spin(true);
 
   // SVG fallback.
   if (/\.svg/.test(src) && !Modernizr.svg) src = src.replace('.svg', '.png');
@@ -57,6 +65,8 @@ function render (el) {
   loading.appendChild(img);
 
   function show () {
+    spin(false);
+    
     if (action === 'hold') {
       defer(function () { el.style.display = ''; }, delay);
       return;

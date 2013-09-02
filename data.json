@@ -24,7 +24,7 @@
       "images": [
         {
           "src": "01_my_cells_1.jpg",
-          "class": "no-transition",
+          "class": null,
           "position": 0,
           "size": 0,
           "z": 1,
@@ -51,6 +51,8 @@
           "position": 5,
           "size": 3,
           "z": 1,
+          "action": "remove",
+          "delay": 1500,
           "orientation": "landscape"
         }
       ]
@@ -96,6 +98,8 @@
           "position": 4,
           "size": 2,
           "z": 1,
+          "action": "hold",
+          "delay": 400,
           "orientation": "landscape"
         },
         {
@@ -104,6 +108,8 @@
           "position": 6,
           "size": 2,
           "z": 2,
+          "action": "remove",
+          "delay": 400,
           "orientation": "landscape"
         }
       ]
@@ -334,8 +340,8 @@
         {
           "src": "23_snake.jpg",
           "class": null,
-          "position": 5,
-          "size": 3,
+          "position": 0,
+          "size": 0,
           "z": 1,
           "orientation": "landscape"
         }
@@ -347,11 +353,19 @@
       "background": "white",
       "images": [
         {
+          "src": "23_snake.jpg",
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
           "src": "24_feed_grain.jpg",
           "class": null,
           "position": 5,
           "size": 4,
-          "z": 1,
+          "z": 2,
           "orientation": "landscape"
         }
       ]
@@ -362,11 +376,27 @@
       "background": "white",
       "images": [
         {
-          "src": "25_spherical_tank.jpg",
+          "src": "23_snake.jpg",
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
+          "src": "24_feed_grain.jpg",
           "class": null,
           "position": 5,
           "size": 4,
-          "z": 1,
+          "z": 2,
+          "orientation": "landscape"
+        },
+        {
+          "src": "25_spherical_tank.jpg",
+          "class": null,
+          "position": 5,
+          "size": 3,
+          "z": 3,
           "orientation": "landscape"
         }
       ]
@@ -469,7 +499,7 @@
         {
           "src": "33_stone.jpg",
           "class": null,
-          "position": 2,
+          "position": 5,
           "size": 2,
           "z": 1,
           "orientation": "landscape"
@@ -533,6 +563,14 @@
           "size": 2,
           "z": 1,
           "orientation": "landscape"
+        },
+        {
+          "src": "36_jasons_dining_room.jpg",
+          "class": null,
+          "position": 4,
+          "size": 2,
+          "z": 2,
+          "orientation": "landscape"
         }
       ]
     },
@@ -542,11 +580,27 @@
       "background": "white",
       "images": [
         {
+          "src": "37_carlos_home_caracas.jpg",
+          "class": null,
+          "position": 6,
+          "size": 2,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
+          "src": "36_jasons_dining_room.jpg",
+          "class": null,
+          "position": 4,
+          "size": 2,
+          "z": 2,
+          "orientation": "landscape"
+        },
+        {
           "src": "38_dam.jpg",
           "class": null,
           "position": 5,
           "size": 4,
-          "z": 1,
+          "z": 3,
           "orientation": "landscape"
         }
       ]
@@ -746,7 +800,7 @@
       "background": "white",
       "images": [
         {
-          "src": "08_kitsilano_winter.jpg",
+          "src": "50_kitsilano_summer.jpg",
           "class": null,
           "position": 5,
           "size": 2,
@@ -754,11 +808,13 @@
           "orientation": "landscape"
         },
         {
-          "src": "50_kitsilano_summer.jpg",
+          "src": "08_kitsilano_winter.jpg",
           "class": null,
           "position": 5,
           "size": 2,
-          "z": 1,
+          "z": 2,
+          "action": "remove",
+          "delay": 400,
           "orientation": "landscape"
         }
       ]
@@ -804,14 +860,30 @@
     {
       "slug": "path",
       "title": "Path",
-      "background": "white",
+      "background": "black",
       "images": [
+        {
+          "src": "51_my_way_home.jpg",
+          "class": null,
+          "position": 4,
+          "size": 2,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
+          "src": "52_road_to_my_family_home.jpg",
+          "class": null,
+          "position": 6,
+          "size": 2,
+          "z": 2,
+          "orientation": "landscape"
+        },
         {
           "src": "53_path.jpg",
           "class": null,
           "position": 5,
           "size": 3,
-          "z": 1,
+          "z": 3,
           "orientation": "landscape"
         }
       ]
@@ -847,8 +919,9 @@
       ]
     },
     {
-      "slug": "8.2 minutes",
+      "slug": "8.2-minutes",
       "title": "A photon takes 8.2 minutes to travel from the Sun to the Earth. This is an 8.2 minute photograph of Gaserans, Catalunya",
+      "text": "<p>A light photon is created in the nucleus of the Sun and takes millions of years to reach the surface.<br>This tiny portion of light travels from the surface of the Sun to the Earth in 8.2 minutes.<br>This is an 8.2 minute photograph.</p>",
       "background": "white",
       "images": [
         {
@@ -857,6 +930,8 @@
           "position": 0,
           "size": 0,
           "z": 1,
+          "action": "remove",
+          "delay": 492000,
           "orientation": "landscape"
         }
       ]

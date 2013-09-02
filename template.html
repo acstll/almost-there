@@ -15,9 +15,15 @@
 
 		<% _.each(data.images, function (image) { %>
 			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %> <%= image.orientation %>" 
-				data-src="<%= data.filepath %><%= image.src %>"
+				data-src="<%= image.src %>" 
+				data-action="<%= image.action %>" 
+				data-delay="<%= image.delay %>" 
 				style="z-index:<%= image.z %>;"></div>
 		<% }); %>
+
+		<% if (data.text) { %>
+			<div class="text"><%= data.text %></div>
+		<% } %>
 
 		<div id="loading-box"></div>
 

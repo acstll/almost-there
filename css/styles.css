@@ -40,20 +40,6 @@ body {
 	overflow: hidden;
 }
 
-div {
-	transition: opacity .25s;
-	-webkit-transition: opacity .25s;
-	-moz-transition: opacity .25s;
-	-o-transition: opacity .25s;
-}
-
-.no-transition {
-	transition: none;
-	-webkit-transition: none;
-	-moz-transition: none;
-	-o-transition: none;
-}
-
 .position-0,
 .position-1,
 .position-2,
@@ -98,3 +84,25 @@ div {
 .size-2.landscape { background-size: 40%; }
 .size-3.landscape { background-size: 55%; }
 .size-4.landscape { background-size: 70%; }
+
+
+
+/* Text (8.2 minutes) */
+
+.text {
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	padding: 1em;
+	font-family: Times, Georgia;
+	font-size: 2em;
+	color: rgb(150, 150, 150);
+}
+
+@media screen and (max-width: 60.000em) {
+	.text {
+		width: 100%;
+		left: 0;
+	}
+}

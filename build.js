@@ -80,8 +80,10 @@ function build (options, callback) {
     
     fs.writeFileSync(dir + '/index.html', template({
       filepath: filepath,
+      slug: page.slug,
       next: next ? '/' + slugs.join('/') : data.link,
       title: page.title,
+      text: page.text,
       background: page.background,
       images: page.images,
       preload: next ? JSON.stringify(pages[i + 1].images) : null

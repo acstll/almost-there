@@ -1,7 +1,7 @@
 /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-opacity-csstransitions-history-svg-touch-teststyles-testprop-testallprops-prefixes-domprefixes
+ * Build: http://modernizr.com/download/#-history-svg-touch-teststyles-prefixes
  */
-;window.Modernizr=function(a,b,c){function z(a){i.cssText=a}function A(a,b){return z(l.join(a+";")+(b||""))}function B(a,b){return typeof a===b}function C(a,b){return!!~(""+a).indexOf(b)}function D(a,b){for(var d in a){var e=a[d];if(!C(e,"-")&&i[e]!==c)return b=="pfx"?e:!0}return!1}function E(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:B(f,"function")?f.bind(d||b):f}return!1}function F(a,b,c){var d=a.charAt(0).toUpperCase()+a.slice(1),e=(a+" "+n.join(d+" ")+d).split(" ");return B(b,"string")||B(b,"undefined")?D(e,b):(e=(a+" "+o.join(d+" ")+d).split(" "),E(e,b,c))}var d="2.6.2",e={},f=b.documentElement,g="modernizr",h=b.createElement(g),i=h.style,j,k={}.toString,l=" -webkit- -moz- -o- -ms- ".split(" "),m="Webkit Moz O ms",n=m.split(" "),o=m.toLowerCase().split(" "),p={svg:"http://www.w3.org/2000/svg"},q={},r={},s={},t=[],u=t.slice,v,w=function(a,c,d,e){var h,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:g+(d+1),l.appendChild(j);return h=["&#173;",'<style id="s',g,'">',a,"</style>"].join(""),l.id=g,(m?l:n).innerHTML+=h,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=f.style.overflow,f.style.overflow="hidden",f.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),f.style.overflow=k),!!i},x={}.hasOwnProperty,y;!B(x,"undefined")&&!B(x.call,"undefined")?y=function(a,b){return x.call(a,b)}:y=function(a,b){return b in a&&B(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=u.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(u.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(u.call(arguments)))};return e}),q.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:w(["@media (",l.join("touch-enabled),("),g,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},q.history=function(){return!!a.history&&!!history.pushState},q.opacity=function(){return A("opacity:.55"),/^0.55$/.test(i.opacity)},q.csstransitions=function(){return F("transition")},q.svg=function(){return!!b.createElementNS&&!!b.createElementNS(p.svg,"svg").createSVGRect};for(var G in q)y(q,G)&&(v=G.toLowerCase(),e[v]=q[G](),t.push((e[v]?"":"no-")+v));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)y(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof enableClasses!="undefined"&&enableClasses&&(f.className+=" "+(b?"":"no-")+a),e[a]=b}return e},z(""),h=j=null,e._version=d,e._prefixes=l,e._domPrefixes=o,e._cssomPrefixes=n,e.testProp=function(a){return D([a])},e.testAllProps=F,e.testStyles=w,e}(this,this.document);
+;window.Modernizr=function(a,b,c){function w(a){i.cssText=a}function x(a,b){return w(l.join(a+";")+(b||""))}function y(a,b){return typeof a===b}function z(a,b){return!!~(""+a).indexOf(b)}function A(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:y(f,"function")?f.bind(d||b):f}return!1}var d="2.6.2",e={},f=b.documentElement,g="modernizr",h=b.createElement(g),i=h.style,j,k={}.toString,l=" -webkit- -moz- -o- -ms- ".split(" "),m={svg:"http://www.w3.org/2000/svg"},n={},o={},p={},q=[],r=q.slice,s,t=function(a,c,d,e){var h,i,j,k,l=b.createElement("div"),m=b.body,n=m||b.createElement("body");if(parseInt(d,10))while(d--)j=b.createElement("div"),j.id=e?e[d]:g+(d+1),l.appendChild(j);return h=["&#173;",'<style id="s',g,'">',a,"</style>"].join(""),l.id=g,(m?l:n).innerHTML+=h,n.appendChild(l),m||(n.style.background="",n.style.overflow="hidden",k=f.style.overflow,f.style.overflow="hidden",f.appendChild(n)),i=c(l,a),m?l.parentNode.removeChild(l):(n.parentNode.removeChild(n),f.style.overflow=k),!!i},u={}.hasOwnProperty,v;!y(u,"undefined")&&!y(u.call,"undefined")?v=function(a,b){return u.call(a,b)}:v=function(a,b){return b in a&&y(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=r.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(r.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(r.call(arguments)))};return e}),n.touch=function(){var c;return"ontouchstart"in a||a.DocumentTouch&&b instanceof DocumentTouch?c=!0:t(["@media (",l.join("touch-enabled),("),g,")","{#modernizr{top:9px;position:absolute}}"].join(""),function(a){c=a.offsetTop===9}),c},n.history=function(){return!!a.history&&!!history.pushState},n.svg=function(){return!!b.createElementNS&&!!b.createElementNS(m.svg,"svg").createSVGRect};for(var B in n)v(n,B)&&(s=B.toLowerCase(),e[s]=n[B](),q.push((e[s]?"":"no-")+s));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)v(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof enableClasses!="undefined"&&enableClasses&&(f.className+=" "+(b?"":"no-")+a),e[a]=b}return e},w(""),h=j=null,e._version=d,e._prefixes=l,e.testStyles=t,e}(this,this.document);
 
 /*! Hammer.JS - v1.0.5 - 2013-04-07
  * http://eightmedia.github.com/hammer.js
@@ -21,6 +21,7 @@ var RIGHT_ARR = 39;
 
 var images;
 var loading = document.getElementById('loading-box');
+var text = document.querySelector('.text');
 
 
 
@@ -29,41 +30,55 @@ function handleKey (e) {
       || e.keyCode === SPACEBAR
       || e.keyCode === RIGHT_ARR) {
     
-    var href = document.querySelector('.next').href;
-    window.location = href;
+    next();
   }
+}
+
+function next () {
+  var href = document.querySelector('.next').href;
+  window.location = href;
 }
 
 function render (el) {
-  var img = new Image;
+  var img;
   var src = el.getAttribute('data-src');
+  var action = el.getAttribute('data-action');
+  var delay = el.getAttribute('data-delay') || 500;
 
   if (!src) return;
 
-  // SVG fallback
+  // SVG fallback.
   if (/\.svg/.test(src) && !Modernizr.svg) src = src.replace('.svg', '.png');
 
-  if (Modernizr.opacity) el.style.opacity = 0;
   el.style.display = 'none';
 
+  img = load(src);
   addListener('load', show, img);
-  img.src = src;
   loading.appendChild(img);
 
   function show () {
+    if (action === 'hold') {
+      defer(function () { el.style.display = ''; }, delay);
+      return;
+    }
+
+    if (action === 'remove') {
+      defer(function () { el.parentNode.removeChild(el); }, delay);
+    }
+
     el.style.display = '';
-    if (Modernizr.opacity) el.style.opacity = 1;
   }
 
-  el.style.backgroundImage = 'url(' + src + ')';
+  el.style.backgroundImage = 'url(' + img.src + ')';
 }
 
-function load (src) {
+function load (src, preload) {
   if (!src) return;
 
   var img = new Image;
   img.src = filepath + src;
-  loading.appendChild(img);
+  if (preload) loading.appendChild(img);
+  return img;
 }
 
 // IE8 bullshit
@@ -79,29 +94,32 @@ function addListener (type, handler, el) {
   return el;
 }
 
-
-// lt-ie8 check
-if (!'querySelector' in document) {
-  alert('Your browser is too old.');
-
-  // TODO
-  // maybe add class to body to "unhide" hidden img tags
-  // but make sure display:none images do not load before showing
+function defer (fn, delay) {
+  setTimeout(fn, delay || 0);
 }
 
-// Go to next page on spacebar or enter
+
+
+// Old IE check (TODO: be nice).
+if (!'querySelector' in document) {
+  alert('Your browser is too old.');
+}
+
+// Go to next page on spacebar or enter.
+// Or tablet's swipe.
 addListener('keydown', handleKey);
+if (Modernizr.touch) Hammer(document.querySelector('.next')).on('swipeleft', next);
 
-// Special magic for special cases
-// TODO
-
-// Render images
+// Render images.
 images = document.querySelectorAll('div');
 for (var i = 0; i < images.length; i++) render(images[i]);
 
-// Really pre-load
+// Preload following images.
 if (typeof preload === 'object' && preload.length) {
-  for (i = 0; i < preload.length; i++) load(preload[i].src);
+  for (i = 0; i < preload.length; i++) load(preload[i].src, true);
 }
+
+// For the 8.2 minutes page.
+if (text) defer(function () { text.style.display = 'block'; }, 2000);
 
 })();

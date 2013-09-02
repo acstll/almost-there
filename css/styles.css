@@ -34,7 +34,7 @@ body {
 	width: .5em;
 	height: .5em;
 	border-radius: .5em;
-	background: yellow;
+	background: rgb(255, 0, 0);
 	transition: display .1s;
 	-webkit-transition: display .1s;
 	-moz-transition: display .1s;

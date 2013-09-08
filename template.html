@@ -30,11 +30,9 @@
 
 		<script>
 		var filepath = '<%= data.filepath %>';
-		var slug = '<%= data.slug %>';
 		var pages = JSON.parse('<%= data.pages %>');
-		<% if (!_.isEmpty(data.preload)) { %>
 		var preload = JSON.parse('<%= data.preload %>');
-		<% }; %>
+		var slug = '<%= data.slug %>';
 		</script>
 		
 		<script src="/js/scripts.js"></script>

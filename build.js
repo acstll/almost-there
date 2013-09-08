@@ -86,7 +86,7 @@ function build (options, callback) {
       text: page.text,
       background: page.background,
       images: page.images,
-      preload: next ? JSON.stringify(pages[i + 1].images) : null,
+      preload: next ? JSON.stringify(pages[i + 1].images) : JSON.stringify({}),
       pages: JSON.stringify(pages)
     }));
   });

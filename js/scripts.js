@@ -160,7 +160,7 @@ function defer (fn, delay) {
 
 
 
-function run () {
+function run (images, preload) {
   // Go to next page on spacebar or enter.
   // Or tablet's swipe.
   addListener('keydown', handleKey);
@@ -176,6 +176,6 @@ function run () {
   }
 }
 
-run();
+run(images, preload);
 
 })();

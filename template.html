@@ -10,7 +10,7 @@
 
 		<link rel="stylesheet" href="/css/styles.css">
 	</head>
-	<body class="<%= data.background %> <%= data.slug %>">
+	<body class="<%= data.background %>">
 		<a href="<%= data.next %>" class="next">Next</a>
 
 		<% _.each(data.images, function (image) { %>
@@ -29,12 +29,17 @@
 		<div id="spinner"></div>
 
 		<script>
+		var filepath = '<%= data.filepath %>';
+		var slug = '<%= data.slug %>';
+		var pages = JSON.parse('<%= data.pages %>');
 		<% if (!_.isEmpty(data.preload)) { %>
 		var preload = JSON.parse('<%= data.preload %>');
 		<% }; %>
-		var filepath = '<%= data.filepath %>';
 		</script>
 		
 		<script src="/js/scripts.js"></script>
+
+		<!--[if lte IE 7]><p>Your browser is too old.</p><![endif]-->
+		<noscript><p>This website needs JavaScript, it's 2013.</p></noscript>
 	</body>
 </html>

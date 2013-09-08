@@ -45,7 +45,7 @@ function spin (start) {
   spinner.style.display = display;
 }
 
-function render (el) {
+function render (el, page) {
   var img;
   var src = el.getAttribute('data-src');
   var action = el.getAttribute('data-action');
@@ -77,9 +77,13 @@ function render (el) {
     }
 
     el.style.display = '';
+    
+    // For '8.2 minutes' page only.
+    if (page === '8.2-minutes') showTimer();
   }
 
   el.style.backgroundImage = 'url(' + img.src + ')';
+  if (text) defer(function () { text.style.display = 'block' }, 1000);
 }
 
 function load (src, preload) {
@@ -104,32 +108,74 @@ function addListener (type, handler, el) {
   return el;
 }
 
+function showTimer () {
+  var markup = timerMarkup();
+  var ahead = Date.now() + 492000;
+  var running = setInterval(tick, 1000);
+  
+  function tick () {
+    var point = ahead - Date.now();
+    var moment = new Date(point);
+
+    if (point <= 0) clear();
+
+    markup.min.textContent = moment.getMinutes();
+    markup.sec.textContent = pad(moment.getSeconds());
+  }  
+
+  function clear () {
+    clearInterval(running);
+    document.body.removeChild(markup.el);
+  }
+
+  function pad (value) {
+    var number = value.toString();
+    return (number.length === 1) ? '0' + number : number; 
+  }
+
+  document.body.appendChild(markup.el);
+}
+
+function timerMarkup () {
+  var container = document.createElement('div');
+  var min = document.createTextNode('-');
+  var colon = document.createTextNode(':');
+  var sec = document.createTextNode('--');
+  
+  container.id = 'clock';
+  container.appendChild(min);
+  container.appendChild(colon);
+  container.appendChild(sec);
+
+  return {
+    el: container,
+    min: min,
+    sec: sec
+  }
+}
+
 function defer (fn, delay) {
   setTimeout(fn, delay || 0);
 }
 
 
 
-// Old IE check (TODO: be nice).
-if (!'querySelector' in document) {
-  alert('Your browser is too old.');
+function run () {
+  // Go to next page on spacebar or enter.
+  // Or tablet's swipe.
+  addListener('keydown', handleKey);
+  if (Modernizr.touch) Hammer(document.querySelector('.next')).on('swipeleft', next);
+
+  // Render images.
+  images = document.querySelectorAll('div');
+  for (var i = 0; i < images.length; i++) render(images[i], slug);
+
+  // Preload following images.
+  if (typeof preload === 'object' && preload.length) {
+    for (i = 0; i < preload.length; i++) load(preload[i].src, true);
+  }
 }
 
-// Go to next page on spacebar or enter.
-// Or tablet's swipe.
-addListener('keydown', handleKey);
-if (Modernizr.touch) Hammer(document.querySelector('.next')).on('swipeleft', next);
-
-// Render images.
-images = document.querySelectorAll('div');
-for (var i = 0; i < images.length; i++) render(images[i]);
-
-// Preload following images.
-if (typeof preload === 'object' && preload.length) {
-  for (i = 0; i < preload.length; i++) load(preload[i].src, true);
-}
-
-// For the 8.2 minutes page.
-if (text) defer(function () { text.style.display = 'block'; }, 2000);
+run();
 
 })();

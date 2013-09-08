@@ -109,15 +109,31 @@ body {
 	position: absolute;
 	top: 10%;
 	left: 10%;
-	padding: 1em;
-	font-family: Times, Georgia;
+	max-width: 35em;
+	font-family: Times, serif;
 	font-size: 2em;
-	color: rgb(150, 150, 150);
+	font-weight: normal;
+	font-style: italic; 
+	color: rgb(235, 235, 235);
 }
 
-@media screen and (max-width: 60.000em) {
+#clock {
+	position: fixed;
+	z-index: 100;
+	bottom: 1.667em;
+	right: 1.667em;
+	width: auto;
+	color: rgb(255, 255, 255);
+	font-family: Menlo, Monaco, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+@media screen and (max-width: 40.000em) {
 	.text {
 		width: 100%;
+		max-width: 100%;
 		left: 0;
+		font-size: 1.5em;
+		padding: 1em;
 	}
 }

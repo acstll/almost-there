@@ -8,6 +8,7 @@ var RIGHT_ARR = 39;
 
 var pages = global.pages;
 var currentIndex = _.findIndex(pages, { slug: global.slug });
+var rendered = []; // <img> sources (String).
 
 var imagesEl = document.getElementById('images');
 var loadingEl = document.getElementById('loading-box');
@@ -45,25 +46,24 @@ function next () {
 }
 
 function run (page, push) {
+  var i;
   var nextPage = pages[currentIndex + 1];
   var nextImages = nextPage ? nextPage.images : [];
   var timer = document.getElementById('timer');
-  var i;
 
-  // Set title.
-  document.body.title = page.title;
+  // Check if any images about to render were rendered already.
+  var current = _.pluck(page.images, 'src');
+  var present = _.intersection(rendered, current);
 
-  // Set background.
+  document.title = page.title;
   document.body.className = page.background;
+  nextEl.href = nextPage ? url() + nextPage.slug : global.link;
 
   // Clean up.
-  imagesEl.innerHTML = '';
+  if (!present.length) imagesEl.innerHTML = ''; // Do better, selectively?
   textEl.innerHTML = '';
   loadingEl.innerHTML = '';
   if (timer) timer.parentNode.removeChild(timer);
-
-  // Next URL.
-  nextEl.href = nextPage ? url() + nextPage.slug : global.link;
 
   // Preload follow up images.
   if (nextImages.length) {
@@ -74,6 +74,9 @@ function run (page, push) {
   // el -> class: position-n size-n orientation, style: z-index
   _.each(page.images, function (image) {
     var el = document.createElement('div');
+
+    // Don't re-render rendered images.
+    if (_.contains(rendered, image.src)) return;
 
     el.className = image.class + ' position-' + image.position + ' size-' + image.size + ' ' + image.orientation;
     el.style.zIndex = image.z;
@@ -89,6 +92,8 @@ function run (page, push) {
 
   // URL.
   if (push) window.history.pushState({ slug: page.slug }, page.slug, url());
+
+  rendered = current.slice(0);
 }
 
 function url () {

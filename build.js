@@ -26,6 +26,7 @@ module.exports = build;
 function build (options, callback) {
   var filepath;
   var pages = data.pages;
+  var shifted = pages.slice(1);
 
   // remove folders from latest build
   if (!clean && typeof latest === 'string') {
@@ -46,30 +47,25 @@ function build (options, callback) {
 
   console.log('building...');
 
-  slugs.push(pages[0].slug);
+  slugs.push(shifted[0].slug);
 
   // reference to "root" dir for removing it on next build
-  fs.writeFileSync(latestPath, pages[0].slug);
+  fs.writeFileSync(latestPath, shifted[0].slug);
 
   // index.html
   fs.writeFileSync(__dirname + '/index.html', template({
     filepath: filepath,
+    slug: pages[0].slug,
     next: join('/', slugs[0]),
-    title: 'Aleix Plademunt',
-    images: [{
-      'src': '00_ap.svg',
-      'class': null,
-      'position': 5,
-      'size': 1,
-      'z': 1,
-      'orientation': 'landscape'
-    }],
-    preload: JSON.stringify(pages[0].images)
+    title: pages[0].title,
+    images: pages[0].images,
+    pages: JSON.stringify(pages),
+    link: data.link
   }));
 
   // images + coda
-  _.each(pages, function (page, i) {
-    var next = (i == pages.length - 1) ? null : pages[i + 1].slug;
+  _.each(shifted, function (page, i) {
+    var next = (i == shifted.length - 1) ? null : shifted[i + 1].slug;
     var dir = join(__dirname, slugs.join('/'));
 
     if (next) slugs.push(next);
@@ -83,11 +79,9 @@ function build (options, callback) {
       slug: page.slug,
       next: next ? '/' + slugs.join('/') : data.link,
       title: page.title,
-      text: page.text,
       background: page.background,
-      images: page.images,
-      preload: next ? JSON.stringify(pages[i + 1].images) : JSON.stringify({}),
-      pages: JSON.stringify(pages)
+      pages: JSON.stringify(pages),
+      link: data.link
     }));
   });
 

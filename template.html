@@ -11,19 +11,10 @@
 		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body class="<%= data.background %>">
-		<a href="<%= data.next %>" class="next">Next</a>
-
-		<% _.each(data.images, function (image) { %>
-			<div class="<%= image.class %> position-<%= image.position %> size-<%= image.size %> <%= image.orientation %>" 
-				data-src="<%= image.src %>" 
-				data-action="<%= image.action %>" 
-				data-delay="<%= image.delay %>" 
-				style="z-index:<%= image.z %>;"></div>
-		<% }); %>
-
-		<% if (data.text) { %>
-			<div class="text"><%= data.text %></div>
-		<% } %>
+		<a href="<%= data.next %>" id="next">Next</a>
+		
+		<div id="images"></div>
+		<div id="text"></div>
 
 		<div id="loading-box"></div>
 		<div id="spinner"></div>
@@ -31,11 +22,12 @@
 		<script>
 		var filepath = '<%= data.filepath %>';
 		var pages = JSON.parse('<%= data.pages %>');
-		var preload = JSON.parse('<%= data.preload %>');
 		var slug = '<%= data.slug %>';
+		var link = '<%= data.link %>';
 		</script>
 		
-		<script src="/js/scripts.js"></script>
+		<script src="/js/vendor.js"></script>
+		<script src="/js/almost-there.js"></script>
 
 		<!--[if lte IE 7]><p>Your browser is too old.</p><![endif]-->
 		<noscript><p>This website needs JavaScript, it's 2013.</p></noscript>

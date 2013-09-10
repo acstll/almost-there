@@ -557,11 +557,19 @@
       "background": "white",
       "images": [
         {
+          "src": "35_ice.jpg",
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
           "src": "36_jasons_dining_room.jpg",
           "class": null,
           "position": 4,
           "size": 2,
-          "z": 1,
+          "z": 2,
           "orientation": "landscape"
         }
       ]
@@ -572,11 +580,19 @@
       "background": "white",
       "images": [
         {
+          "src": "35_ice.jpg",
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
           "src": "37_carlos_home_caracas.jpg",
           "class": null,
           "position": 6,
           "size": 2,
-          "z": 1,
+          "z": 2,
           "orientation": "landscape"
         },
         {
@@ -584,7 +600,7 @@
           "class": null,
           "position": 4,
           "size": 2,
-          "z": 2,
+          "z": 3,
           "orientation": "landscape"
         }
       ]
@@ -595,11 +611,19 @@
       "background": "white",
       "images": [
         {
+          "src": "35_ice.jpg",
+          "class": null,
+          "position": 0,
+          "size": 0,
+          "z": 1,
+          "orientation": "landscape"
+        },
+        {
           "src": "37_carlos_home_caracas.jpg",
           "class": null,
           "position": 6,
           "size": 2,
-          "z": 1,
+          "z": 2,
           "orientation": "landscape"
         },
         {
@@ -607,7 +631,7 @@
           "class": null,
           "position": 4,
           "size": 2,
-          "z": 2,
+          "z": 3,
           "orientation": "landscape"
         },
         {
@@ -615,7 +639,7 @@
           "class": null,
           "position": 5,
           "size": 4,
-          "z": 3,
+          "z": 4,
           "orientation": "landscape"
         }
       ]

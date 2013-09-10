@@ -78,7 +78,7 @@ function run (page, push) {
     // Don't re-render rendered images.
     if (_.contains(rendered, image.src)) return;
 
-    el.className = image.class + ' position-' + image.position + ' size-' + image.size + ' ' + image.orientation;
+    el.className = image['class'] + ' position-' + image.position + ' size-' + image.size + ' ' + image.orientation;
     el.style.zIndex = image.z;
 
     render(el, {

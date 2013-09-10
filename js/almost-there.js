@@ -63,7 +63,7 @@ function run (page, push) {
   if (!present.length) imagesEl.innerHTML = ''; // Do better, selectively?
   textEl.innerHTML = '';
   loadingEl.innerHTML = '';
-  if (timer) timer.parentNode.removeChild(timer);
+  if (timer && page.slug !== '8.2-minutes') timer.parentNode.removeChild(timer);
 
   // Preload follow up images.
   if (nextImages.length) {
@@ -140,7 +140,7 @@ function render (el, data) {
     el.style.display = '';
     
     // For '8.2 minutes' page only.
-    if (data.slug === '8.2-minutes') showTimer();
+    if (data.slug === '8.2-minutes') showTimer(data.delay);
   }
 
   if (data.text) _.delay(function () {
@@ -187,10 +187,10 @@ function spin (start) {
 
 // Timer for 8.2 minutes page.
 
-function showTimer () {
+function showTimer (duration) {
   var markup = timerMarkup();
-  var ahead = Date.now() + 492000;
-  var running = setInterval(tick, 999);
+  var ahead = Date.now() + duration || 492000;
+  var running = setInterval(tick, 1000);
   
   function tick () {
     var point = ahead - Date.now();
@@ -204,7 +204,7 @@ function showTimer () {
 
   function clear () {
     clearInterval(running);
-    document.body.removeChild(markup.el);
+    markup.el.style.display = 'none';
   }
 
   function pad (value) {

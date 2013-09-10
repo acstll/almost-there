@@ -104,19 +104,6 @@ body {
 
 /* Text (8.2 minutes) */
 
-#text {
-	display: none;
-	position: absolute;
-	top: 10%;
-	left: 10%;
-	max-width: 35em;
-	font-family: Times, serif;
-	font-size: 2em;
-	font-weight: normal;
-	font-style: italic; 
-	color: rgb(235, 235, 235);
-}
-
 #timer {
 	position: fixed;
 	z-index: 100;
@@ -128,12 +115,29 @@ body {
 	font-size: 12px;
 }
 
+#text {
+	display: none;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	font-family: Times, serif;
+	font-size: 1.667em;
+	font-weight: normal; 
+	color: rgb(235, 235, 235);
+}
+
+#text p {
+	max-width: 35em;
+	margin: 0 auto;
+}
+
 @media screen and (max-width: 40.000em) {
-	.text {
-		width: 100%;
-		max-width: 100%;
-		left: 0;
-		font-size: 1.5em;
+	#text {
+		top: 20%;
+	}
+
+	#text p {
 		padding: 1em;
 	}
 }

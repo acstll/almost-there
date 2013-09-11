@@ -442,9 +442,8 @@ img {
 }
 
 a {
-	color: rgb(30, 30, 30);
+	color: rgb(0, 0, 0);
 	text-decoration: none;
-	border-bottom: 1px solid rgb(100, 100, 100);
 }
 
 .together {
@@ -453,6 +452,14 @@ a {
 
 .apart {
 	margin-top: 3em;
+}
+
+.centered {
+  text-align: center;
+}
+
+.small {
+  font-size: 0.938em;
 }
 
 @media screen and (max-width: 40.000em) {

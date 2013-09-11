@@ -144,12 +144,11 @@ function render (el, data) {
     
     // For '8.2 minutes' page only.
     if (data.slug === '8.2-minutes') showTimer(data.delay);
+    if (data.text) _.delay(function () {
+      textEl.innerHTML = data.text;
+      textEl.style.display = 'block';
+    }, 1000);
   }
-
-  if (data.text) _.delay(function () {
-    textEl.innerHTML = data.text;
-    textEl.style.display = 'block';
-  }, 1000);
 
   el.style.backgroundImage = 'url(' + img.src + ')';
   imagesEl.appendChild(el);

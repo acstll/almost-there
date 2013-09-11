@@ -85,11 +85,7 @@ body {
 .position-8 { background-position: center bottom; }
 .position-9 { background-position: right bottom; }
 
-.size-0 {
-	background-size: cover;
-	-ms-behavior: url(/backgroundsize.min.htc);
-}
-
+.size-0 { background-size: cover; }
 .size-1.portrait { background-size: auto 30%; }
 .size-2.portrait { background-size: auto 45%; }
 .size-3.portrait { background-size: auto 55%; }
@@ -99,6 +95,19 @@ body {
 .size-2.landscape { background-size: 40%; }
 .size-3.landscape { background-size: 55%; }
 .size-4.landscape { background-size: 70%; }
+
+/* IE8 bullshit */
+.size-0,
+.size-1.portrait,
+.size-2.portrait,
+.size-3.portrait,
+.size-4.portrait,
+.size-1.landscape,
+.size-2.landscape,
+.size-3.landscape,
+.size-4.landscape {
+	-ms-behavior: url(/backgroundsize.min.htc);
+}
 
 
 

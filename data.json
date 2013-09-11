@@ -959,7 +959,7 @@
     },
     {
       "slug": "8.2-minutes",
-      "title": "8.2 minute photograph of Gaserans, Catalunya",
+      "title": "8.2 minutes",
       "text": "<p>A light photon is created in the nucleus of the Sun and takes millions of years to reach the surface. This tiny portion of light travels from the surface of the Sun to the Earth in 8.2 minutes. This is an 8.2 minute photograph.</p>",
       "background": "black",
       "images": [
@@ -970,7 +970,7 @@
           "size": 0,
           "z": 1,
           "action": "remove",
-          "delay": 492000,
+          "delay": 500000,
           "orientation": "landscape"
         }
       ]

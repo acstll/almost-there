@@ -91,7 +91,10 @@ function run (page, push) {
   });
 
   // URL.
-  if (push) window.history.pushState({ slug: page.slug }, page.slug, url());
+  if (push) {
+    window.history.pushState({ slug: page.slug }, page.slug, url());
+    ga('send', 'pageview');
+  }
 
   rendered = current.slice(0);
 }

@@ -93,7 +93,11 @@ function run (page, push) {
   // URL.
   if (push) {
     window.history.pushState({ slug: page.slug }, page.slug, url());
-    ga('send', 'pageview');
+    
+    ga('send', 'pageview', {
+      'page': url(),
+      'title': page.title
+    });
   }
 
   rendered = current.slice(0);

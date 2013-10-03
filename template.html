@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Arturo Castillo Delgado <19@8302.net> -->
+<html>
+	<head>
+		<title><%= data.title %></title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="Aleix Plademunt, photography, Almost There, Ca l'Isidret Edicions, Mack Books">
+
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body class="<%= data.background %>">
+		<a href="<%= data.next %>" id="next">Next</a>
+		
+		<div id="images"></div>
+		<div id="text"></div>
+
+		<div id="loading-box"></div>
+		<div id="spinner"></div>
+
+		<script>
+		var filepath = '<%= data.filepath %>';
+		var pages = JSON.parse('<%= data.pages %>');
+		var slug = '<%= data.slug %>';
+		var link = '<%= data.link %>';
+		</script>
+		
+		<script src="/js/vendor.js"></script>
+		<script src="/js/almost-there.js"></script>
+
+		<!--[if lte IE 7]><p>Your browser is too old.</p><![endif]-->
+		<noscript><p>This website needs JavaScript, it's 2013.</p></noscript>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-43951175-1', 'aleixplademunt.com');
+			ga('send', 'pageview');
+		</script>
+	</body>
+</html>

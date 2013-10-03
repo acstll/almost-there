@@ -1,0 +1,152 @@
+* { 
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 10px;
+}
+
+.white {
+	background-color: rgb(255, 255, 255);
+}
+
+.black {
+	background-color: rgb(0, 0, 0);
+}
+
+#loading-box {
+	display: none;
+}
+
+#spinner {
+	display: none;
+	position: fixed;
+	z-index: 100;
+	top: 2em;
+	left: 2em;
+	width: .5em;
+	height: .5em;
+	border-radius: .5em;
+	background: rgb(255, 0, 0);
+	transition: display .1s;
+	-webkit-transition: display .1s;
+	-moz-transition: display .1s;
+}
+
+#next {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: transparent;
+	/*background: rgba(100, 0, 240, 0.2);*/
+	cursor: default;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.position-0,
+.position-1,
+.position-2,
+.position-3,
+.position-4,
+.position-5,
+.position-6,
+.position-7,
+.position-8,
+.position-9 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	margin: 2em;
+}
+
+.position-0 { background-position: center; margin: 0; }
+.position-1 { background-position: left top; }
+.position-2 { background-position: center top; }
+.position-3 { background-position: right top; }
+.position-4 { background-position: left; }
+.position-5 { background-position: center; }
+.position-6 { background-position: right; }
+.position-7 { background-position: left bottom; }
+.position-8 { background-position: center bottom; }
+.position-9 { background-position: right bottom; }
+
+.size-0 { background-size: cover; }
+.size-1.portrait { background-size: auto 30%; }
+.size-2.portrait { background-size: auto 45%; }
+.size-3.portrait { background-size: auto 55%; }
+.size-4.portrait { background-size: auto 85%; }
+
+.size-1.landscape { background-size: 30%; }
+.size-2.landscape { background-size: 40%; }
+.size-3.landscape { background-size: 55%; }
+.size-4.landscape { background-size: 70%; }
+
+/* IE8 bullshit */
+.size-0,
+.size-1.portrait,
+.size-2.portrait,
+.size-3.portrait,
+.size-4.portrait,
+.size-1.landscape,
+.size-2.landscape,
+.size-3.landscape,
+.size-4.landscape {
+	-ms-behavior: url(/backgroundsize.min.htc);
+}
+
+
+
+/* Text (8.2 minutes) */
+
+#timer {
+	position: fixed;
+	z-index: 100;
+	bottom: 1.667em;
+	right: 1.667em;
+	width: auto;
+	color: rgb(255, 255, 255);
+	font-family: Menlo, Monaco, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+#text {
+	display: none;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	font-family: Times, serif;
+	font-size: 1.667em;
+	font-weight: normal; 
+	color: rgb(235, 235, 235);
+}
+
+#text p {
+	max-width: 35em;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 40.000em) {
+	#text {
+		top: 20%;
+	}
+
+	#text p {
+		padding: 1em;
+	}
+}

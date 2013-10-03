@@ -1,24 +1,9 @@
 {
-  "link": "/book.html",
-  "filepath": "/images/",
+  "link": "/book",
+  "filepath": "http://8302.net/almost-there/images/",
   "pages": [
     {
       "slug": "",
-      "title": "Aleix Plademunt",
-      "background": "white",
-      "images": [
-        {
-          "src": "00_ap.svg",
-          "class": null,
-          "position": 5,
-          "size": 1,
-          "z": 1,
-          "orientation": "landscape"
-        }
-      ]
-    },
-    {
-      "slug": "my-cells",
       "title": "My Cells",
       "background": "white",
       "images": [

@@ -461,16 +461,17 @@ blockquote > p {
 #switcher {
   position: absolute;
   z-index: 10;
+  width: 100%;
   top: 1.067em;
-  right: 1.067em;
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 #switcher > li {
-  float: left;
-  margin-left: 1.067em;
+  display: inline-block;
+  margin: 0 0.5335em;
 }
 
 .together {

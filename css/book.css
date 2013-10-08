@@ -482,8 +482,16 @@ blockquote > p {
 	margin-top: 3em;
 }
 
+.dblapart {
+  margin-top: 6em;
+}
+
 .centered {
   text-align: center;
+}
+
+.to-right {
+  text-align: right;
 }
 
 .small {
